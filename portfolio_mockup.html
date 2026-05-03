@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Cloud Security Engineer & DevSecOps Practitioner</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: #080b12;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+  }
+
+  .port {
+    background: #0f1117;
+    color: #e2e8f0;
+    width: 860px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 0.5px solid #2d3148;
+  }
+
+  .hero {
+    padding: 56px 48px 48px;
+    border-bottom: 0.5px solid #1e2235;
+  }
+
+  .tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: #4ade80;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .hero-name {
+    font-size: 42px;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: #f1f5f9;
+    margin: 0 0 8px;
+    line-height: 1.1;
+  }
+
+  .hero-title {
+    font-size: 15px;
+    color: #64748b;
+    font-weight: 400;
+    margin: 0 0 24px;
+    letter-spacing: 0.01em;
+  }
+
+  .hero-bio {
+    font-size: 15px;
+    line-height: 1.75;
+    color: #94a3b8;
+    max-width: 580px;
+    margin: 0 0 28px;
+  }
+
+  .hero-bio strong { color: #cbd5e1; font-weight: 500; }
+
+  .links { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  .link-pill {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    padding: 6px 14px;
+    border: 0.5px solid #2d3a4a;
+    border-radius: 20px;
+    color: #7dd3fc;
+    background: transparent;
+    text-decoration: none;
+  }
+
+  .section {
+    padding: 40px 48px;
+    border-bottom: 0.5px solid #1e2235;
+  }
+
+  .section-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    color: #475569;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .bio-wrap {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+  }
+
+  .bio-photo {
+    width: 110px;
+    height: 130px;
+    border-radius: 8px;
+    background: #1a2030;
+    border: 0.5px solid #2d3a4a;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .photo-placeholder {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    color: #334155;
+    text-align: center;
+    letter-spacing: 0.08em;
+    line-height: 1.8;
+  }
+
+  .bio-text p {
+    font-size: 15px;
+    line-height: 1.75;
+    color: #94a3b8;
+    margin-bottom: 14px;
+  }
+
+  .bio-text p:last-child { margin-bottom: 0; }
+  .bio-text strong { color: #cbd5e1; font-weight: 500; }
+
+  .positioning {
+    background: #131825;
+    border-left: 2px solid #4ade80;
+    padding: 20px 24px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 20px;
+  }
+
+  .positioning p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #94a3b8;
+    margin: 0;
+  }
+
+  .positioning p strong { color: #e2e8f0; font-weight: 500; }
+
+  .sub-text { font-size: 14px; color: #64748b; line-height: 1.7; }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .project-card {
+    background: #131825;
+    border: 0.5px solid #1e2235;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .proj-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: #4ade80;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  .proj-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #e2e8f0;
+    margin-bottom: 8px;
+  }
+
+  .proj-desc {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+
+  .proj-impact {
+    font-size: 12px;
+    color: #4ade80;
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: 0.02em;
+    margin-bottom: 14px;
+    flex: 1;
+  }
+
+  .proj-link {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: #7dd3fc;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    display: inline-block;
+  }
+
+  .proj-link:hover { text-decoration: underline; }
+
+  /* Grouped skills */
+  .skills-groups { display: flex; flex-direction: column; gap: 14px; }
+
+  .skill-group-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .skill-group-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: #4ade80;
+    text-transform: uppercase;
+    min-width: 150px;
+    padding-top: 6px;
+    flex-shrink: 0;
+  }
+
+  .skill-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+
+  .skill-chip {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    padding: 5px 12px;
+    background: #131825;
+    border: 0.5px solid #1e2235;
+    border-radius: 4px;
+    color: #94a3b8;
+    letter-spacing: 0.04em;
+  }
+
+  .contact-row { display: flex; align-items: flex-start; gap: 48px; flex-wrap: wrap; }
+
+  .contact-item { font-size: 13px; color: #64748b; line-height: 1.8; }
+
+  .contact-item span {
+    display: block;
+    color: #7dd3fc;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+  }
+
+  .footer-note {
+    padding: 16px 48px;
+    background: #0a0d14;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: #1e2a3a;
+    letter-spacing: 0.12em;
+    text-align: right;
+  }
+</style>
+</head>
+<body>
+<div class="port">
+
+  <div class="hero">
+    <div class="tag">Cloud Security · DevSecOps</div>
+    <h1 class="hero-name">[Your Name]</h1>
+    <p class="hero-title">Cloud Security Engineer & DevSecOps Practitioner</p>
+    <p class="hero-bio">
+      I secure cloud infrastructure by thinking like the people who built it. <strong>Six years as a software engineer</strong> gave me that lens. Today I apply it to cloud security and DevSecOps, where I can see the risk in the code because I used to write it.
+    </p>
+    <div class="links">
+      <a class="link-pill" href="#">LinkedIn ↗</a>
+      <a class="link-pill" href="https://github.com/Lia-Bing0" target="_blank">GitHub ↗</a>
+      <span class="link-pill">CompTIA Security+</span>
+      <span class="link-pill">AZ-500 (in progress)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">About</div>
+    <div class="bio-wrap">
+      <div class="bio-photo">
+        <div class="photo-placeholder">YOUR<br>PHOTO<br>HERE</div>
+      </div>
+      <div class="bio-text">
+        <p>
+          I started as a software developer, building backend services, shipping CI/CD pipelines, and working inside regulated environments where a misconfiguration is not just a technical issue but a compliance failure. At <strong>M&T Bank</strong>, that meant PCI-DSS, multi-tier change approval, and production systems where security was never optional.
+        </p>
+        <p>
+          That engineering background is the lens I bring to security. I don't just flag what's wrong. I understand <strong>why it was built that way</strong> and what it takes to fix it without breaking everything else. Most security professionals learn to read code. I learned security after writing it, and that difference shows up in how I work.
+        </p>
+        <p>
+          Today I focus on cloud-native security: zero-trust pipeline design, OIDC-based identity federation, infrastructure-as-code security, and threat detection across Azure and AWS environments.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">How I think</div>
+    <div class="positioning">
+      <p>The question isn't <strong>"does this work?"</strong> It's <strong>"what risk does this introduce?"</strong> Misconfiguration is the vulnerability. Most cloud security failures aren't exotic exploits; they're defaults left unchallenged and access left unscoped.</p>
+    </div>
+    <p class="sub-text">
+      This shapes how I approach every engagement, from OIDC federation in CI/CD pipelines, to Terraform IaC security gates, to Kubernetes workload identity. Every infrastructure decision is a security decision.
+    </p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Work samples</div>
+    <div class="project-grid">
+
+      <div class="project-card">
+        <div class="proj-tag">Threat Detection</div>
+        <div class="proj-name">Azure Threat Detection Pipeline</div>
+        <div class="proj-desc">Terraform-provisioned Microsoft Sentinel pipeline detecting brute-force auth activity (MITRE T1110) with KQL analytics rules and automated incident generation.</div>
+        <div class="proj-impact">↳ Undetected brute-force attempts become breaches. This pipeline surfaces them while there is still time to respond.</div>
+        <a class="proj-link" href="https://github.com/Lia-Bing0/azure-defender-sentinel-detection-lab" target="_blank">View on GitHub ↗</a>
+      </div>
+
+      <div class="project-card">
+        <div class="proj-tag">Kubernetes · Identity</div>
+        <div class="proj-name">AKS Workload Identity & OIDC Federation</div>
+        <div class="proj-desc">Keyless Kubernetes auth via OIDC federation to Azure Key Vault with no static credentials. Trivy scanning across Terraform, manifests, and container images in CI.</div>
+        <div class="proj-impact">↳ Static credentials in configs are future incidents waiting to happen. This removes them entirely.</div>
+        <a class="proj-link" href="https://github.com/Lia-Bing0/aks-secure-oidc-lab" target="_blank">View on GitHub ↗</a>
+      </div>
+
+      <div class="project-card">
+        <div class="proj-tag">CI/CD · IaC Security</div>
+        <div class="proj-name">Secure Terraform Delivery Pipeline</div>
+        <div class="proj-desc">Zero-trust GitHub Actions pipeline using OIDC federation to Azure with Checkov policy-as-code gates. Live PR demonstrates pipeline failure on TLS misconfiguration before remediation.</div>
+        <div class="proj-impact">↳ Misconfiguration is the vulnerability. This pipeline stops insecure infrastructure before it ever deploys.</div>
+        <a class="proj-link" href="https://github.com/Lia-Bing0/secure-terraform-azure-pipeline" target="_blank">View on GitHub ↗</a>
+      </div>
+
+      <div class="project-card">
+        <div class="proj-tag">Multi-Cloud · DevSecOps</div>
+        <div class="proj-name">Multi-Cloud OIDC Federation Pipeline</div>
+        <div class="proj-desc">Azure DevOps to AWS STS federation eliminating long-lived credentials across multi-cloud infrastructure, with iterative least-privilege IAM scoping and Checkov CI gates.</div>
+        <div class="proj-impact">↳ Long-lived credentials across cloud boundaries are a wide-open attack surface. This closes that gap.</div>
+        <a class="proj-link" href="https://github.com/Lia-Bing0/azure-devops-aws-federation-lab" target="_blank">View on GitHub ↗</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">What I do</div>
+    <div class="skills-groups">
+      <div class="skill-group-row">
+        <div class="skill-group-label">Identity & Access</div>
+        <div class="skill-chips">
+          <span class="skill-chip">OIDC / Federated Identity</span>
+          <span class="skill-chip">IAM / RBAC</span>
+          <span class="skill-chip">Zero Trust Architecture</span>
+          <span class="skill-chip">OAuth 2.0</span>
+        </div>
+      </div>
+      <div class="skill-group-row">
+        <div class="skill-group-label">Secure Pipelines</div>
+        <div class="skill-chips">
+          <span class="skill-chip">GitHub Actions</span>
+          <span class="skill-chip">GitLab CI/CD</span>
+          <span class="skill-chip">Azure DevOps</span>
+          <span class="skill-chip">Jenkins</span>
+          <span class="skill-chip">Checkov</span>
+          <span class="skill-chip">Trivy</span>
+          <span class="skill-chip">Terraform</span>
+          <span class="skill-chip">Ansible</span>
+          <span class="skill-chip">CloudFormation</span>
+        </div>
+      </div>
+      <div class="skill-group-row">
+        <div class="skill-group-label">Cloud Platforms</div>
+        <div class="skill-chips">
+          <span class="skill-chip">Microsoft Azure</span>
+          <span class="skill-chip">AWS</span>
+          <span class="skill-chip">Kubernetes (AKS)</span>
+          <span class="skill-chip">Docker</span>
+        </div>
+      </div>
+      <div class="skill-group-row">
+        <div class="skill-group-label">Detection & SIEM</div>
+        <div class="skill-chips">
+          <span class="skill-chip">Microsoft Sentinel</span>
+          <span class="skill-chip">Microsoft Defender for Cloud</span>
+          <span class="skill-chip">Splunk</span>
+          <span class="skill-chip">ELK Stack</span>
+          <span class="skill-chip">KQL</span>
+          <span class="skill-chip">Azure Monitor</span>
+        </div>
+      </div>
+      <div class="skill-group-row">
+        <div class="skill-group-label">Compliance</div>
+        <div class="skill-chips">
+          <span class="skill-chip">PCI-DSS</span>
+          <span class="skill-chip">NIST 800-53</span>
+          <span class="skill-chip">OWASP</span>
+          <span class="skill-chip">HIPAA</span>
+        </div>
+      </div>
+      <div class="skill-group-row">
+        <div class="skill-group-label">Languages</div>
+        <div class="skill-chips">
+          <span class="skill-chip">Python</span>
+          <span class="skill-chip">Bash</span>
+          <span class="skill-chip">PowerShell</span>
+          <span class="skill-chip">Java</span>
+          <span class="skill-chip">C++</span>
+          <span class="skill-chip">KQL</span>
+        </div>
+      </div>
+      <div class="skill-group-row">
+        <div class="skill-group-label">Operating Systems</div>
+        <div class="skill-chips">
+          <span class="skill-chip">Linux</span>
+          <span class="skill-chip">Windows Server</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Contact</div>
+    <div class="contact-row">
+      <div class="contact-item">Email<span>you@email.com</span></div>
+      <div class="contact-item">Location<span>Newark, DE</span></div>
+      <div class="contact-item">LinkedIn<span>linkedin.com/in/yourhandle</span></div>
+      <div class="contact-item">GitHub<span>github.com/Lia-Bing0</span></div>
+    </div>
+  </div>
+
+  <div class="footer-note">SINGLE PAGE · NO NAVIGATION REQUIRED</div>
+
+</div>
+</body>
+</html>
