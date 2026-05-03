@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio | Cloud Security Engineer & DevSecOps Practitioner</title>
+<title>Portfolio | Cloud Security Engineer</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -15,12 +15,13 @@
     justify-content: center;
     padding: 40px 20px;
     min-height: 100vh;
+    font-size: 16px;
   }
 
   .port {
     background: #0f1117;
     color: #e2e8f0;
-    width: 860px;
+    width: 900px;
     border-radius: 12px;
     overflow: hidden;
     border: 0.5px solid #2d3148;
@@ -29,11 +30,12 @@
   .hero {
     padding: 56px 48px 48px;
     border-bottom: 0.5px solid #1e2235;
+    text-align: center;
   }
 
   .tag {
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 0.12em;
     color: #4ade80;
     text-transform: uppercase;
@@ -41,7 +43,7 @@
   }
 
   .hero-name {
-    font-size: 42px;
+    font-size: 48px;
     font-weight: 300;
     letter-spacing: -0.02em;
     color: #f1f5f9;
@@ -50,7 +52,7 @@
   }
 
   .hero-title {
-    font-size: 15px;
+    font-size: 16px;
     color: #64748b;
     font-weight: 400;
     margin: 0 0 24px;
@@ -58,22 +60,25 @@
   }
 
   .hero-bio {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.75;
     color: #94a3b8;
-    max-width: 580px;
-    margin: 0 0 28px;
+    max-width: 600px;
+    margin: 0 auto 28px;
   }
 
-  .hero-bio strong { color: #cbd5e1; font-weight: 500; }
-
-  .links { display: flex; gap: 12px; flex-wrap: wrap; }
+  .links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
   .link-pill {
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 0.06em;
-    padding: 6px 14px;
+    padding: 6px 16px;
     border: 0.5px solid #2d3a4a;
     border-radius: 20px;
     color: #7dd3fc;
@@ -88,7 +93,7 @@
 
   .section-label {
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 0.18em;
     color: #475569;
     text-transform: uppercase;
@@ -102,8 +107,8 @@
   }
 
   .bio-photo {
-    width: 110px;
-    height: 130px;
+    width: 120px;
+    height: 140px;
     border-radius: 8px;
     background: #1a2030;
     border: 0.5px solid #2d3a4a;
@@ -123,25 +128,21 @@
   }
 
   .bio-text p {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.75;
     color: #94a3b8;
-    margin-bottom: 14px;
   }
-
-  .bio-text p:last-child { margin-bottom: 0; }
-  .bio-text strong { color: #cbd5e1; font-weight: 500; }
 
   .positioning {
     background: #131825;
     border-left: 2px solid #4ade80;
-    padding: 20px 24px;
+    padding: 22px 26px;
     border-radius: 0 8px 8px 0;
     margin-bottom: 20px;
   }
 
   .positioning p {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.7;
     color: #94a3b8;
     margin: 0;
@@ -149,58 +150,59 @@
 
   .positioning p strong { color: #e2e8f0; font-weight: 500; }
 
-  .sub-text { font-size: 14px; color: #64748b; line-height: 1.7; }
+  .sub-text { font-size: 16px; color: #64748b; line-height: 1.7; }
 
   .project-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    gap: 16px;
   }
 
   .project-card {
     background: #131825;
     border: 0.5px solid #1e2235;
     border-radius: 8px;
-    padding: 20px;
+    padding: 26px;
     display: flex;
     flex-direction: column;
   }
 
   .proj-tag {
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 0.1em;
     color: #4ade80;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     text-transform: uppercase;
   }
 
   .proj-name {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     color: #e2e8f0;
-    margin-bottom: 8px;
-  }
-
-  .proj-desc {
-    font-size: 13px;
-    color: #64748b;
-    line-height: 1.6;
     margin-bottom: 10px;
   }
 
+  .proj-desc {
+    font-size: 15px;
+    color: #64748b;
+    line-height: 1.65;
+    margin-bottom: 12px;
+  }
+
   .proj-impact {
-    font-size: 12px;
+    font-size: 14px;
     color: #4ade80;
     font-family: 'IBM Plex Mono', monospace;
     letter-spacing: 0.02em;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
     flex: 1;
+    line-height: 1.5;
   }
 
   .proj-link {
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
+    font-size: 12px;
     color: #7dd3fc;
     text-decoration: none;
     letter-spacing: 0.04em;
@@ -209,8 +211,7 @@
 
   .proj-link:hover { text-decoration: underline; }
 
-  /* Grouped skills */
-  .skills-groups { display: flex; flex-direction: column; gap: 14px; }
+  .skills-groups { display: flex; flex-direction: column; gap: 16px; }
 
   .skill-group-row {
     display: flex;
@@ -220,11 +221,11 @@
 
   .skill-group-label {
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 0.1em;
     color: #4ade80;
     text-transform: uppercase;
-    min-width: 150px;
+    min-width: 155px;
     padding-top: 6px;
     flex-shrink: 0;
   }
@@ -233,8 +234,8 @@
 
   .skill-chip {
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    padding: 5px 12px;
+    font-size: 12px;
+    padding: 6px 14px;
     background: #131825;
     border: 0.5px solid #1e2235;
     border-radius: 4px;
@@ -244,13 +245,13 @@
 
   .contact-row { display: flex; align-items: flex-start; gap: 48px; flex-wrap: wrap; }
 
-  .contact-item { font-size: 13px; color: #64748b; line-height: 1.8; }
+  .contact-item { font-size: 15px; color: #64748b; line-height: 1.8; }
 
   .contact-item span {
     display: block;
     color: #7dd3fc;
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .footer-note {
@@ -269,16 +270,18 @@
 
   <div class="hero">
     <div class="tag">Cloud Security · DevSecOps</div>
-    <h1 class="hero-name">[Your Name]</h1>
-    <p class="hero-title">Cloud Security Engineer & DevSecOps Practitioner</p>
+    <h1 class="hero-name">Lia Chandler</h1>
+    <p class="hero-title">Cloud Security Engineer (DevSecOps and Identity)</p>
     <p class="hero-bio">
-      I secure cloud infrastructure by thinking like the people who built it. <strong>Six years as a software engineer</strong> gave me that lens. Today I apply it to cloud security and DevSecOps, where I can see the risk in the code because I used to write it.
+      Six years as a software engineer taught me how systems get built, how they break, and where the risk actually lives. I can see the risk in the code because I used to write it.
+    </p>
+    <p class="hero-bio" style="margin-top: 12px;">
+      Today I apply that lens to cloud security and DevSecOps, focusing on identity-driven access, misconfiguration risk, and the pipeline decisions that create real exposure.
     </p>
     <div class="links">
-      <a class="link-pill" href="#">LinkedIn ↗</a>
+      <a class="link-pill" href="https://www.linkedin.com/in/lia-chandler-a4733452" target="_blank">LinkedIn ↗</a>
       <a class="link-pill" href="https://github.com/Lia-Bing0" target="_blank">GitHub ↗</a>
       <span class="link-pill">CompTIA Security+</span>
-      <span class="link-pill">AZ-500 (in progress)</span>
     </div>
   </div>
 
@@ -286,17 +289,11 @@
     <div class="section-label">About</div>
     <div class="bio-wrap">
       <div class="bio-photo">
-        <div class="photo-placeholder">YOUR<br>PHOTO<br>HERE</div>
+        <img src="portfolio_picture.jpg" alt="Your Name" style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
       </div>
       <div class="bio-text">
         <p>
-          I started as a software developer, building backend services, shipping CI/CD pipelines, and working inside regulated environments where a misconfiguration is not just a technical issue but a compliance failure. At <strong>M&T Bank</strong>, that meant PCI-DSS, multi-tier change approval, and production systems where security was never optional.
-        </p>
-        <p>
-          That engineering background is the lens I bring to security. I don't just flag what's wrong. I understand <strong>why it was built that way</strong> and what it takes to fix it without breaking everything else. Most security professionals learn to read code. I learned security after writing it, and that difference shows up in how I work.
-        </p>
-        <p>
-          Today I focus on cloud-native security: zero-trust pipeline design, OIDC-based identity federation, infrastructure-as-code security, and threat detection across Azure and AWS environments.
+          At M&T Bank I worked inside a PCI-DSS regulated environment where security was not a separate concern but part of every deployment decision. I owned CI/CD pipeline releases through multi-tier change approval, containerized legacy workloads, and enforced RBAC and least-privilege access across internal services in collaboration with InfoSec. That experience gave me something most security engineers do not have: I know what it looks like from the other side of the code review. I know why engineers cut corners under delivery pressure, how misconfigurations slip through, and what actually breaks when you try to fix them. That context is what I bring to every security engagement.
         </p>
       </div>
     </div>
@@ -320,7 +317,7 @@
         <div class="proj-tag">Threat Detection</div>
         <div class="proj-name">Azure Threat Detection Pipeline</div>
         <div class="proj-desc">Terraform-provisioned Microsoft Sentinel pipeline detecting brute-force auth activity (MITRE T1110) with KQL analytics rules and automated incident generation.</div>
-        <div class="proj-impact">↳ Undetected brute-force attempts become breaches. This pipeline surfaces them while there is still time to respond.</div>
+        <div class="proj-impact">↳ Undetected brute-force attempts become breaches. This pipeline surfaces them early before they become incidents.</div>
         <a class="proj-link" href="https://github.com/Lia-Bing0/azure-defender-sentinel-detection-lab" target="_blank">View on GitHub ↗</a>
       </div>
 
@@ -402,7 +399,6 @@
         <div class="skill-chips">
           <span class="skill-chip">PCI-DSS</span>
           <span class="skill-chip">NIST 800-53</span>
-          <span class="skill-chip">OWASP</span>
           <span class="skill-chip">HIPAA</span>
         </div>
       </div>
@@ -421,7 +417,7 @@
         <div class="skill-group-label">Operating Systems</div>
         <div class="skill-chips">
           <span class="skill-chip">Linux</span>
-          <span class="skill-chip">Windows Server</span>
+          <span class="skill-chip">Windows</span>
         </div>
       </div>
     </div>
@@ -430,9 +426,9 @@
   <div class="section">
     <div class="section-label">Contact</div>
     <div class="contact-row">
-      <div class="contact-item">Email<span>you@email.com</span></div>
+      <div class="contact-item">Email<span>kylia.chandler@yahoo.com</span></div>
       <div class="contact-item">Location<span>Newark, DE</span></div>
-      <div class="contact-item">LinkedIn<span>linkedin.com/in/yourhandle</span></div>
+      <div class="contact-item">LinkedIn<span>linkedin.com/in/lia-chandler-a4733452</span></div>
       <div class="contact-item">GitHub<span>github.com/Lia-Bing0</span></div>
     </div>
   </div>
